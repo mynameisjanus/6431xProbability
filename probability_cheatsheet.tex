@@ -369,6 +369,20 @@ A PDF is nonnegative and integrates to $1$. By the fundamental theorem of calcul
 	\end{align*}
 \end{description}
 
+\subsection{A Deeper View of Conditioning}
+\begin{description}
+	\item[Conditional Expectation as a Random Variable] ~
+	\[E\left[X|Y\right]=g(Y)\]
+	\item[Law of Iterated Expectations] ~
+	\[E\left[E\left[X|Y\right]\right]=E\left[X\right]\]
+	\item[Law of Total Variance] ~
+	\[\var(X)=E\left[\var\left(X|Y\right)\right]+\var\left(E\left[X|Y\right]\right)\]
+	\item[Sum of a Random Number of Independent RVs] Let $Y=X_1+\dots+X_N$ where $N$ is a random variable. Then,
+	\begin{align*}
+		\var(Y)&=E\left[\var(Y|N)\right]+\var\left(E\left[Y|N\right]\right)\\
+		&=E[N]\,\var(X)+\left(E[X]\right)^2\var(N)
+	\end{align*}
+\end{description}
 \section{Bayesian Inference}\smallskip \hrule height 1pt \smallskip
 
 Consider an unknown random variable $\Theta$ with a prior distribution $p_\Theta(\theta)$ or $f_\Theta(\theta)$. We make an observation $X$ modeled as a random variable with distribution $p_{X|\Theta}(x|\theta)$ or $f_{X|\Theta}(x|\theta)$. Using the appropriate version of the Bayes' rule, we can construct the appropriate posterior distribution $p_{\Theta|X}(\theta|x)$ or $f_{\Theta|X}(\theta|x).$
@@ -964,7 +978,7 @@ The table above gives R commands for working with various named distributions. C
 \item Stat 110 Quora Blog (\url{https://stat110.quora.com/})
 \item Quora Probability FAQ (\url{http://bit.ly/probabilityfaq})
 \item R Studio (\url{https://www.rstudio.com})
-\item LaTeX File (\texttt{\href{https://github.com/wzchen/probability_cheatsheet}{github.com/wzchen/probability\_cheatsheet}})
+\item LaTeX File (\texttt{\href{https://github.com/mynameisjanus/6431xProbability}{github.com/mynameisjanus/6431xProbability}})
 \end{itemize}
 
 \begin{center}\emph{Please share this cheatsheet with friends!}\end{center}
